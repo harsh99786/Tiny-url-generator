@@ -25,6 +25,9 @@
 </head>
 
 <body>
+    <div class="heading" style="position: absolute;
+    top: 50px;
+    font-size: 47px;font-weight: bold;">TINY-LY</div>
     <div class="wrapper">
         <form action="">
             <input type="text" name="full-url" placeholder="ENTER THE LONG URL" required>
@@ -38,8 +41,8 @@
             if(mysqli_num_rows($sql2)>0){
                ?>
                 <div class="count">
-            <span>Total Links: <span>10</span> & Total Clicks: <span>140</span></span>
-            <a href="">Clear All</a>
+            <!-- <span>Total Links: <span>10</span> & Total Clicks: <span>140</span></span> -->
+            <a href="php/clear.php?delete=all">Clear All</a>
         </div>
         <div class="urls-area">
          <div class="title">
@@ -72,7 +75,7 @@
                     }
                     ?></li>
              <li><?php echo $row['clicks'] ?></li>
-             <li><a href="#">Delete</a></li>
+             <li><a href="php/delete.php?id=<?php echo $row['shorten_url']?>">Delete</a></li>
          </div>
                 <?php
                } 

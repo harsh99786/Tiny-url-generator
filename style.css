@@ -276,3 +276,8 @@ form .copy-icon:hover {
     margin-top: 10px;
     width: 100%;
 }
+heading{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
